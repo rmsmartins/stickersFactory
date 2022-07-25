@@ -39,7 +39,9 @@ public class App {
         
             Map<String,String> filme = listaDeFilmes.get(i);
 
-            String urlImagem = filme.get("image")
+            String urlImagem = 
+                //filme.get("image")
+                filme.get("url")
                 .replaceAll("(@+)(.*).jpg$", "$1.jgp");
 
             String titulo = filme.get("title")

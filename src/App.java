@@ -33,7 +33,10 @@ public class App {
         
         // apresentar e manipular os dados 
         var fabrica = new fabricaDeStickers();
-        for (Map<String,String> filme : listaDeFilmes) {
+        
+        for (int i = 0; i < 10; i++) {
+        
+            Map<String,String> filme = listaDeFilmes.get(i);
             String urlImagem = filme.get("image");
             String titulo = filme.get("title");
             
@@ -45,6 +48,6 @@ public class App {
             System.out.println(titulo);
             System.out.println();
             
-        }
+        
     }
 }

@@ -1,12 +1,7 @@
-import java.net.URI;
+import java.io.InputStream;
 import java.net.URL;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.net.http.HttpResponse.BodyHandlers;
 import java.util.List;
 import java.util.Map;
-import java.io.*;
 
 public class App {
 
@@ -23,10 +18,12 @@ public class App {
         //String url = "https://imdb-api.com/en/API/MostPopularMovies/k_d6o9vfgi";
         String url = "https://api.nasa.gov/planetary/apod?api_key=coea0W7a796J0IB00v2BET6gdkhngNaNeN3AZ1jW&start_date=2022-07-21&end_date=2022-07-24";
         
+        var http = new clienteHTTP();
+        String json = http.obtemDados(url);
         
         // extrair os dados que interessam (título, imagem, classificação)
         var parser = new JsonParser();
-        List<Map<String, String>> listaDeConteudos = parser.parse(body);
+        List<Map<String, String>> listaDeConteudos = parser.parse(json);
         
         // apresentar e manipular os dados 
         var fabrica = new fabricaDeStickers();

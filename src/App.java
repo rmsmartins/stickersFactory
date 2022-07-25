@@ -32,6 +32,7 @@ public class App {
         List<Map<String, String>> listaDeFilmes = parser.parse(body);
         
         // apresentar e manipular os dados 
+        var fabrica = new fabricaDeStickers();
         for (Map<String,String> filme : listaDeFilmes) {
             String urlImagem = filme.get("image");
             String titulo = filme.get("title");
@@ -39,10 +40,9 @@ public class App {
             InputStream InputStream = new URL(urlImagem).openStream();
             String nomeFicheiro = titulo + "png";
 
-            var fabrica = new fabricaDeStickers();
             fabrica.cria(InputStream, nomeFicheiro);
 
-            System.out.println(filme.get("title"));
+            System.out.println(titulo);
             System.out.println();
             
         }

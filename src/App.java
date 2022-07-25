@@ -22,11 +22,7 @@ public class App {
         //String url = "https://imdb-api.com/en/API/Top250Movies/k_d6o9vfgi";
         //String url = "https://imdb-api.com/en/API/MostPopularMovies/k_d6o9vfgi";
         String url = "https://api.nasa.gov/planetary/apod?api_key=coea0W7a796J0IB00v2BET6gdkhngNaNeN3AZ1jW&start_date=2022-07-21&end_date=2022-07-24";
-        URI endereco = URI.create(url);
-        var client = HttpClient.newHttpClient();
-        var request = HttpRequest.newBuilder(endereco).GET().build();
-        HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
-        String body = response.body();
+        
         
         // extrair os dados que interessam (título, imagem, classificação)
         var parser = new JsonParser();

@@ -40,8 +40,11 @@ public class App {
 
             String urlImagem = filme.get("image")
                 .replaceAll("(@+)(.*).jpg$", "$1.jgp");
+            //urlImagem = urlImagem.replace(":", "");
 
-            String titulo = filme.get("title");
+            String titulo = filme.get("title")
+                .replace(":", "");
+            
             
             InputStream InputStream = new URL(urlImagem).openStream();
             String nomeFicheiro = "saida/" + titulo + ".png";

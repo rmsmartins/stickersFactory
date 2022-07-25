@@ -21,9 +21,7 @@ public class App {
         var http = new clienteHTTP();
         String json = http.obtemDados(url);
         
-        // extrair os dados que interessam (título, imagem, classificação)
-        var parser = new JsonParser();
-        List<Map<String, String>> listaDeConteudos = parser.parse(json);
+        
         
         // apresentar e manipular os dados 
         var fabrica = new fabricaDeStickers();

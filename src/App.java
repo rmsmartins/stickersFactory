@@ -34,11 +34,15 @@ public class App {
         // apresentar e manipular os dados 
         for (Map<String,String> filme : listaDeFilmes) {
             String urlImagem = filme.get("image");
+            String titulo = filme.get("title");
+            
             InputStream InputStream = new URL(urlImagem).openStream();
+            String nomeFicheiro = titulo + "png";
+
+            var fabrica = new fabricaDeStickers();
+            fabrica.cria(InputStream, nomeFicheiro);
+
             System.out.println(filme.get("title"));
-            System.out.println();
-            System.out.println(PURPLE_BACKGROUND + "Classificação: " + filme.get("imDbRating") + ANSI_RESET);
-            System.out.println("teste" + " \2B50");
             System.out.println();
             
         }

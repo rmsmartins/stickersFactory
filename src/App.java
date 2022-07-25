@@ -33,7 +33,7 @@ public class App {
         
         // apresentar e manipular os dados 
         for (Map<String,String> filme : listaDeFilmes) {
-            String urlImagem = filme.get("image")
+            String urlImagem = filme.get("image");
             InputStream InputStream = new URL(urlImagem).openStream();
             System.out.println(filme.get("title"));
             System.out.println();

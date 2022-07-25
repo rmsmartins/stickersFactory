@@ -35,7 +35,7 @@ public class App {
         // apresentar e manipular os dados 
         var fabrica = new fabricaDeStickers();
         
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 4; i++) {
         
             Map<String,String> filme = listaDeFilmes.get(i);
 

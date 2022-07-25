@@ -1,7 +1,10 @@
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 import java.awt.Color;
 import java.awt.Font;
 
@@ -14,7 +17,9 @@ public class fabricaDeStickers {
     public void cria() throws Exception {
 
         // leitura da imagem
-        BufferedImage imagemOriginal = ImageIO.read(new File("entrada/filme.jpg"));
+        //FileInputStream InputStream = new FileInputStream(new File("entrada/filme.jpg"));
+        InputStream InputStream = new URL("https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@.jpg").openStream();
+        BufferedImage imagemOriginal = ImageIO.read(InputStream);
 
         // criar nova imagem em memória com transparência e com tamanho novo
         int largura = imagemOriginal.getWidth();

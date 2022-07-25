@@ -1,4 +1,5 @@
 import java.net.URI;
+import java.net.URL;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
@@ -32,8 +33,10 @@ public class App {
         
         // apresentar e manipular os dados 
         for (Map<String,String> filme : listaDeFilmes) {
+            String urlImagem = filme.get("image")
+            InputStream InputStream = new URL(urlImagem).openStream();
             System.out.println(filme.get("title"));
-            System.out.println(filme.get("image"));
+            System.out.println();
             System.out.println(PURPLE_BACKGROUND + "Classificação: " + filme.get("imDbRating") + ANSI_RESET);
             System.out.println("teste" + " \2B50");
             System.out.println();

@@ -29,7 +29,11 @@ public class fabricaDeStickers {
         // escrever a imagem nova num ficheiro
         ImageIO.write(novaImagem, "png", new File("saida/imagem.png"));
 
+    }
 
+    public static void main(String[] args) throws Exception {
+        var gerador = new fabricaDeStickers();
+        gerador.cria();
     }
 
 }

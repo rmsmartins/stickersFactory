@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -8,6 +9,12 @@ public class extratorDeConteudoDaNasa {
         // extrair os dados que interessam (título, imagem, classificação)
         var parser = new JsonParser();
         List<Map<String, String>> listaDeAtributos = parser.parse(json);
+
+        List<conteudo> conteudos = new ArrayList<>();
+
+        
+
+        return conteudos;
 
         }
 }

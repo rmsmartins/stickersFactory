@@ -37,11 +37,14 @@ public class App {
         for (int i = 0; i < 10; i++) {
         
             Map<String,String> filme = listaDeFilmes.get(i);
-            String urlImagem = filme.get("image");
+
+            String urlImagem = filme.get("image")
+                .replaceAll("(@+)(.*).jpg$", "$1.jgp");
+
             String titulo = filme.get("title");
             
             InputStream InputStream = new URL(urlImagem).openStream();
-            String nomeFicheiro = titulo + ".png";
+            String nomeFicheiro = "titulo/" + titulo + ".png";
 
             fabrica.cria(InputStream, nomeFicheiro);
 

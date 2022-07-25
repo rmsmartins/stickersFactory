@@ -27,6 +27,7 @@ public class fabricaDeStickers {
         // escrever uma frase na nova imagem
 
         // escrever a imagem nova num ficheiro
+        ImageIO.write(novaImagem, "png", new File("saida/imagem.png"));
 
 
     }

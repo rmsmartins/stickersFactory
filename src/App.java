@@ -30,14 +30,14 @@ public class App {
         
         // extrair os dados que interessam (título, imagem, classificação)
         var parser = new JsonParser();
-        List<Map<String, String>> listaDeFilmes = parser.parse(body);
+        List<Map<String, String>> listaDeConteudos = parser.parse(body);
         
         // apresentar e manipular os dados 
         var fabrica = new fabricaDeStickers();
         
         for (int i = 0; i < 4; i++) {
         
-            Map<String,String> filme = listaDeFilmes.get(i);
+            Map<String,String> filme = listaDeConteudos.get(i);
 
             String urlImagem = 
                 //filme.get("image")

@@ -25,6 +25,7 @@ public class fabricaDeStickers {
         graphics.drawImage(imagemOriginal, 0, 0, null);
 
         // escrever uma frase na nova imagem
+        graphics.drawString("Fantástico", 0, novaAltura-100);
 
         // escrever a imagem nova num ficheiro
         ImageIO.write(novaImagem, "png", new File("saida/imagem.png"));

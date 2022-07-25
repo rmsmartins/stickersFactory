@@ -1,3 +1,4 @@
+import java.security.Key;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -12,7 +13,14 @@ public class extratorDeConteudoDaNasa {
 
         List<conteudo> conteudos = new ArrayList<>();
 
-        
+        // popular a lista de conteudos
+        for (Map<String, String> atributos : listaDeAtributos) {
+            String titulo = atributos.get("title")
+                .replace(":", "");
+            String urlImagem = atributos.get("url");
+            var conteudo = new conteudo(titulo, urlImagem);
+            conteudos.add(conteudo);          
+        }
 
         return conteudos;
 

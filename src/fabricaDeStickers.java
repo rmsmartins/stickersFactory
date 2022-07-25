@@ -40,7 +40,7 @@ public class fabricaDeStickers {
         graphics.drawString("FANTÁSTICO", largura/5, novaAltura-100);
 
         // escrever a imagem nova num ficheiro
-        ImageIO.write(novaImagem, "png", new File("saida/nomeFicheiro"));
+        ImageIO.write(novaImagem, "png", new File("saida/" +nomeFicheiro));
 
     }
 

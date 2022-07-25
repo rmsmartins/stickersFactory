@@ -1,12 +1,9 @@
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
-import java.net.URL;
-import java.awt.Color;
-import java.awt.Font;
 
 import javax.imageio.ImageIO;
 
@@ -14,11 +11,14 @@ import javax.imageio.ImageIO;
 public class fabricaDeStickers {
     
 
-    public void cria() throws Exception {
+    public void cria(InputStream InputStream, String nomeFicheiro) throws Exception {
 
         // leitura da imagem
-        //FileInputStream InputStream = new FileInputStream(new File("entrada/filme.jpg"));
-        InputStream InputStream = new URL("https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@.jpg").openStream();
+        //InputStream InputStream = 
+        //             new FileInputStream(new File("entrada/filme.jpg"));
+        //InputStream InputStream = 
+        //                  new URL("https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@.jpg")
+        //                  .openStream();
         BufferedImage imagemOriginal = ImageIO.read(InputStream);
 
         // criar nova imagem em memória com transparência e com tamanho novo
@@ -40,13 +40,9 @@ public class fabricaDeStickers {
         graphics.drawString("FANTÁSTICO", largura/5, novaAltura-100);
 
         // escrever a imagem nova num ficheiro
-        ImageIO.write(novaImagem, "png", new File("saida/imagem.png"));
+        ImageIO.write(novaImagem, "png", new File("nomeFicheiro"));
 
     }
 
-    public static void main(String[] args) throws Exception {
-        var gerador = new fabricaDeStickers();
-        gerador.cria();
-    }
 
 }

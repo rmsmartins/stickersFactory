@@ -38,7 +38,7 @@ public class App {
             String titulo = filme.get("title");
             
             InputStream InputStream = new URL(urlImagem).openStream();
-            String nomeFicheiro = titulo + "png";
+            String nomeFicheiro = titulo + ".png";
 
             fabrica.cria(InputStream, nomeFicheiro);
 

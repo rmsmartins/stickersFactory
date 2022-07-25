@@ -37,14 +37,14 @@ public class App {
         
         for (int i = 0; i < 4; i++) {
         
-            Map<String,String> filme = listaDeConteudos.get(i);
+            Map<String,String> conteudo = listaDeConteudos.get(i);
 
             String urlImagem = 
-                //filme.get("image")
-                filme.get("url")
+                //conteudo.get("image")
+                conteudo.get("url")
                 .replaceAll("(@+)(.*).jpg$", "$1.jgp");
 
-            String titulo = filme.get("title")
+            String titulo = conteudo.get("title")
                 .replace(":", "");
             
             

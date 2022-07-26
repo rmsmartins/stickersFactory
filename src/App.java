@@ -23,7 +23,10 @@ public class App {
         
         
         
-        // apresentar e manipular os dados 
+        // apresentar e manipular os dados
+        extratorDeConteudoDaNasa extrator = new extratorDeConteudoDaNasa(); 
+        List<conteudo> conteudos = extrator.extraiConteudos(json);
+
         var fabrica = new fabricaDeStickers();
         
         for (int i = 0; i < 4; i++) {

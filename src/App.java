@@ -33,8 +33,8 @@ public class App {
         
             conteudo conteudo = conteudos.get(i);
             
-            InputStream InputStream = new URL(urlImagem).openStream();
-            String nomeFicheiro = "saida/" + titulo + ".png";
+            InputStream InputStream = new URL(conteudo.getUrlImagem()).openStream();
+            String nomeFicheiro = "saida/" + conteudo.getTitulo() + ".png";
 
             fabrica.cria(InputStream, nomeFicheiro);
 

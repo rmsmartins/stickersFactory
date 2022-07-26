@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class extratorDeConteudoDoIMDB {
+public class extratorDeConteudoDoIMDB implements extratorDeConteudo{
     
     public List<conteudo> extraiConteudos (String json){
 
@@ -19,7 +19,7 @@ public class extratorDeConteudoDoIMDB {
               String urlImagem = atributos.get("image")
                     .replaceAll("(@+)(.*).jpg$", "$1.jgp");
               var conteudo = new conteudo(titulo, urlImagem);
-              
+
               conteudos.add(conteudo);          
           }
   

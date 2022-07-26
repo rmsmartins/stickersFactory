@@ -31,7 +31,7 @@ public class App {
         
         for (int i = 0; i < 4; i++) {
         
-            Map<String,String> conteudo = listaDeConteudos.get(i);
+            conteudo conteudo = conteudos.get(i);
 
             String urlImagem = 
                 //conteudo.get("image")

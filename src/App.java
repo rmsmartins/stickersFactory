@@ -32,15 +32,6 @@ public class App {
         for (int i = 0; i < 4; i++) {
         
             conteudo conteudo = conteudos.get(i);
-
-            String urlImagem = 
-                //conteudo.get("image")
-                conteudo.get("url")
-                .replaceAll("(@+)(.*).jpg$", "$1.jgp");
-
-            String titulo = conteudo.get("title")
-                .replace(":", "");
-            
             
             InputStream InputStream = new URL(urlImagem).openStream();
             String nomeFicheiro = "saida/" + titulo + ".png";

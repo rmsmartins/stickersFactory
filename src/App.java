@@ -15,16 +15,18 @@ public class App {
         // url alternativa
         //String url = "https://api.mocki.io/v2/549a5d8b";
         //String url = "https://imdb-api.com/en/API/Top250Movies/k_d6o9vfgi";
-        //String url = "https://imdb-api.com/en/API/MostPopularMovies/k_d6o9vfgi";
-        String url = "https://api.nasa.gov/planetary/apod?api_key=coea0W7a796J0IB00v2BET6gdkhngNaNeN3AZ1jW&start_date=2022-07-21&end_date=2022-07-24";
+        
+        String url = "https://imdb-api.com/en/API/MostPopularMovies/k_d6o9vfgi";
+        extratorDeConteudoDoIMDB extrator = new extratorDeConteudoDoIMDB(); 
+
+        //String url = "https://api.nasa.gov/planetary/apod?api_key=coea0W7a796J0IB00v2BET6gdkhngNaNeN3AZ1jW&start_date=2022-07-21&end_date=2022-07-24";
+        //extratorDeConteudoDaNasa extrator = new extratorDeConteudoDaNasa(); 
         
         var http = new clienteHTTP();
         String json = http.obtemDados(url);
         
         
-        
         // apresentar e manipular os dados
-        extratorDeConteudoDaNasa extrator = new extratorDeConteudoDaNasa(); 
         List<conteudo> conteudos = extrator.extraiConteudos(json);
 
         var fabrica = new fabricaDeStickers();

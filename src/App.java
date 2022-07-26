@@ -38,7 +38,7 @@ public class App {
 
             fabrica.cria(InputStream, nomeFicheiro);
 
-            System.out.println(titulo);
+            System.out.println(conteudo.getTitulo());
             System.out.println();
             
         

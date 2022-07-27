@@ -19,8 +19,11 @@ public class App {
         //String url = "https://imdb-api.com/en/API/MostPopularMovies/k_d6o9vfgi";
         //extratorDeConteudo extrator = new extratorDeConteudoDoIMDB(); 
 
-        String url = "https://api.nasa.gov/planetary/apod?api_key=coea0W7a796J0IB00v2BET6gdkhngNaNeN3AZ1jW&start_date=2022-07-21&end_date=2022-07-24";
-        extratorDeConteudo extrator = new extratorDeConteudoDaNasa(); 
+        //String url = "https://api.nasa.gov/planetary/apod?api_key=coea0W7a796J0IB00v2BET6gdkhngNaNeN3AZ1jW&start_date=2022-07-21&end_date=2022-07-24";
+        //extratorDeConteudo extrator = new extratorDeConteudoDaNasa(); 
+
+        String url = "http://localhost:8080/linguagens";
+        extratorDeConteudo extrator = new extratorDeConteudoDoIMDB();
         
         var http = new clienteHTTP();
         String json = http.obtemDados(url);

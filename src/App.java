@@ -23,7 +23,7 @@ public class App {
         //extratorDeConteudo extrator = new extratorDeConteudoDaNasa(); 
 
         String url = "http://localhost:8080/linguagens";
-        extratorDeConteudo extrator = new extratorDeConteudoDoIMDB();
+        extratorDeConteudo extrator = new extratorDeConteudoDeLinguagens();
         
         var http = new clienteHTTP();
         String json = http.obtemDados(url);
